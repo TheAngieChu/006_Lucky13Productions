@@ -87,16 +87,23 @@
   
   
 /*BUTTON STYLE*/
-    button {
+.option-btn {
+    /* Your existing styles for unselected buttons */
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-  }
+    margin-bottom: 10px;
+}
+
+.option-btn.selected {
+    /* Styles for selected buttons */
+    background-color: #008CBA;
+}
 
     button:hover {
-    background-color: #45a049;
+    background-color: #9ea045;
   }
 
   

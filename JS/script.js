@@ -46,13 +46,19 @@ function selectAnswer(e) {
     const correct = selectedButton.innerText === quizData[currentQuestionIndex].correctAnswer;
     if (correct) {
         score++;
-    }
-    selectedButton.classList.add(correct ? "correct" : "incorrect");
+
+    // Remove the selected class from all buttons in the optionsContainer
+    Array.from(optionsContainer.children).forEach(button => {
+        button.classList.remove("selected");
+    });
+
+    selectedButton.classList.add(correct ? "correct" : "incorrect", "selected");
+
     Array.from(optionsContainer.children).forEach(button => {
         button.removeEventListener("click", selectAnswer);
     });
     nextButton.disabled = false;
-}
+}}
 
 function resetState() {
     nextButton.disabled = true;

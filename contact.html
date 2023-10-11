@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky 13 Productions | Contact Us!</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="IMG/L13_favicon.png" type="image/L13_favicon" />
+
+    <section class="header-container">
+        <header class="header-content">
+  
+      <nav class="main-nav">
+          <ul id="navigation">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="authors.html">Our Authors</a></li>
+            <li><a href="courses.html">Our Courses</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+    </section>
+  </head>
+
+<body>
+
+    <section class="contactform-container" id="contactform">
+    <div class="contactform-content">
+        <h2>Contact Us!</h2>
+        <form action="https://getform.io/f/62337e16-e08c-42a4-bc15-0fa00951632e" method="POST">
+            <p>Let's start with the basics...</p>
+            <input type="text" name="name">First & Last Name</input>
+            <input type="email" name="email">Valid Email Address</input>
+            <input type="text" name="message">Briefly, explain why you want to work with L13.</input>
+            <!-- add hidden Honeypot input to prevent spams -->
+            <input type="hidden" name="_gotcha" style="display:none !important">
+            <!-- radio button handle -->
+            <p>What is your gender?</p>
+            <input type="radio" name="gender" value="male" checked>Male</input>
+            <input type="radio" name="gender" value="female">Female</input>
+            <input type="radio" name="gender" value="other">Other</input>
+            <!-- select field handle -->
+            <p>Please select the primary genre that you write.</p>
+            <select name="genre-experience">
+            <option value="Con-Romance">Contemporary Romance</option>
+            <option value="Par-Romance">Paranormal Romance</option>
+            <option value="Mys-Sus">Mystery/Suspense/Thriller</option>
+            <option value="SciFi">Science Fiction</option>
+            <option value="Fantasy">Urban/Epic/High Fantasy</option>
+            </select>
+            <!-- select field handle -->
+            <p>Have you already published any books?</p>
+            <select name="publishing-experience">
+            <option value="0books">I have not yet published a book.</option>
+            <option value="1book">I've published 1 book.</option>
+            <option value="2-5books">I've published 2-5 books.</option>
+            <option value="5-9books">I've published 5-9 books.</option>
+            <option value="10books">I've published 10 or more books.</option>
+            </select>            
+            <button type="submit">SEND!</button>
+        </form>
+    </div>
+</section>
+
+    <script src="JS/script.js"></script>
+</body>
+
+</html>

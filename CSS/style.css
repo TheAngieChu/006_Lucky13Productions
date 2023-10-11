@@ -1,0 +1,246 @@
+/*BASE STYLE*/
+  
+  h1 {
+    font-size: 60px;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+    color: rgb(58, 233, 58);
+    text-shadow: 3px 3px 1px black;
+  }
+  
+  p {
+    color: rgb(245, 214, 230);
+    font-size: 20px;
+    margin: 0;
+    font-style: normal;
+  }
+
+  h2 {
+    color: rgb(245, 214, 230);
+    font-size: 25px;
+    font-style: normal;
+    line-height: 0%;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+  
+ 
+/*HEADER STYLE*/
+  
+  .header-container {
+    background: #9b0606;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 0;
+  }
+  
+  .header-content {
+    color: #f1f1f1;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    margin: 0;
+  }
+
+/*INTRO STYLE*/
+
+  .intro-container {
+    background-image: url(darkpurplerainbkgd.jpg);
+    background-repeat: repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .intro-content {
+    color:black;
+  }
+
+  
+/*FOOTER STYLE*/
+  .footer-container {
+    background: #1b1b27;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 0;
+  }
+  
+  .footer-content {
+    font-size: 13px;
+    color: #f1f1f1;
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+  }
+  
+  
+/*BUTTON STYLE*/
+    button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+    button:hover {
+    background-color: #45a049;
+  }
+
+  
+/*IMAGE STYLE*/
+  
+  .aboutme-photo {
+    width: 100%;
+    max-width: 320px;
+  }
+  
+  
+/*MEDIA STYLE*/
+  
+@media only screen and (min-width: 320px) {
+}
+
+@media only screen and (min-width: 480px) {
+}
+
+@media only screen and (min-width: 768px) {
+  .projects-content {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+    .main-nav {
+      display: block;
+    }
+  
+    .mobile-nav {
+      display: none;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      height: calc(100vh - 50px);
+      width: 100%;
+    }
+    
+    .open .mobile-nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    
+    .mobile-nav li {
+      margin-bottom: 10px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        header nav {
+          display: none;
+        }
+      
+        #hamburger-icon {
+          display: block;
+        }
+      }
+  
+    ul#navigation {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+      margin: 0;
+    }
+  
+    ul#navigation li a {
+      color: #f1f1f1;
+      font-family: "Cabin", sans-serif;
+      padding: 6px 12px;
+      border: solid 2px transparent;
+      text-transform: uppercase;
+    }
+  
+    ul#navigation li a:hover {
+      color: #f1f1f1;
+      font-family: "Cabin", sans-serif;
+      padding: 6px 12px;
+      border-bottom: solid 2px #74b44a;
+    }
+  }
+
+
+/*-------------------FEATURES-------------------*/
+
+/*QUIZ STYLE*/
+
+.quiz-container {
+    background-color: rgb(0, 73, 75);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    width: 400px;
+}
+
+.options-container {
+    margin-top: 20px;
+}
+
+.next-button {
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+/*COUNTDOWN STYLE*/
+
+.countdown-container {
+    background-color: rgb(69, 0, 75);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 100px;
+}
+
+
+/*CONTACT STYLE*/
+
+.contactform-container {
+    background-color: rgb(0, 73, 75);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    width: 400px;
+}
+
+form {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+label,
+input,
+textarea {
+    display: block;
+    margin-bottom: 10px;
+}

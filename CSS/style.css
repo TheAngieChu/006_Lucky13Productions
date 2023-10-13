@@ -217,14 +217,29 @@
 /*COUNTDOWN STYLE*/
 
 .countdown-container {
-    background-color: rgb(69, 0, 75);
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    height: 100px;
+  background-color: rgb(69, 0, 75);
+  text-align: center;
+  padding: 20px;
+  margin: 0 auto;
+
 }
+
+.countdown-content {
+  margin-bottom: 20px;
+}
+
+hr.double {
+  border-top: 8px double #fff;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#countdown-number {
+  font-size: 24px;
+  color: #fff;
+}
+
+
 
 
 /*CONTACT STYLE*/

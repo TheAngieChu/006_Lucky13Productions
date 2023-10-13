@@ -98,7 +98,7 @@ function calculateDaysRemaining() {
     const daysRemaining = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
 
     // Display the number of days remaining on the webpage
-    const daysRemainingElement = document.getElementById("countdown");
+    const daysRemainingElement = document.getElementById("countdown-number");
     daysRemainingElement.textContent = `${daysRemaining} days remaining until April 01st, 2024!!`;
 }
 

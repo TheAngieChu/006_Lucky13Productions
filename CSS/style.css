@@ -241,6 +241,38 @@ hr.double {
 
 
 
+/*QUOTES STYLE*/
+
+.quote-container {
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9; /* Background color for the quote container */
+  border-radius: 10px; /* Optional: Add rounded corners to the container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow effect */
+}
+
+blockquote {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333; /* Text color for the quote */
+}
+
+#new-quote-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#new-quote-btn:hover {
+  background-color: #45a049;
+}
+
+
 
 /*CONTACT STYLE*/
 

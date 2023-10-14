@@ -44,21 +44,23 @@ function showQuestion(question) {
 function selectAnswer(e) {
     const selectedButton = e.target;
     const correct = selectedButton.innerText === quizData[currentQuestionIndex].correctAnswer;
+
     if (correct) {
         score++;
-
-    // Remove the selected class from all buttons in the optionsContainer
-    Array.from(optionsContainer.children).forEach(button => {
-        button.classList.remove("selected");
-    });
+    }
 
     selectedButton.classList.add(correct ? "correct" : "incorrect", "selected");
 
+    // Disable all buttons to prevent further selections
     Array.from(optionsContainer.children).forEach(button => {
-        button.removeEventListener("click", selectAnswer);
+        button.disabled = true;
     });
+
+    // Enable the next button
     nextButton.disabled = false;
-}}
+}
+
+
 
 function resetState() {
     nextButton.disabled = true;
@@ -104,6 +106,32 @@ function calculateDaysRemaining() {
 
 // Call the function to calculate and display days remaining
 calculateDaysRemaining();
+
+
+
+/*QUOTES SCRIPT*/
+
+window.addEventListener("DOMContentLoaded", (event) => {
+    const quoteElement = document.getElementById("quote");
+    const newQuoteButton = document.getElementById("new-quote-btn");
+
+    function getQuote() {
+        fetch("https://api.quotable.io/random")
+            .then(response => response.json())
+            .then(data => {
+                quoteElement.textContent = `"${data.content}" - ${data.author}`;
+            })
+            .catch(error => {
+                console.error("Error fetching quote:", error);
+            });
+    }
+
+    // Get a new quote when the button is clicked
+    newQuoteButton.addEventListener("click", getQuote);
+
+    // Get an initial quote when the page loads
+    getQuote();
+});
 
 
 

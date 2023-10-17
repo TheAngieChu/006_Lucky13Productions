@@ -109,29 +109,35 @@ calculateDaysRemaining();
 
 
 
-/*QUOTES SCRIPT*/
+/*BORED SCRIPT*/
 
-window.addEventListener("DOMContentLoaded", (event) => {
-    const quoteElement = document.getElementById("quote");
-    const newQuoteButton = document.getElementById("new-quote-btn");
+document.addEventListener('DOMContentLoaded', function () {
+    const activityContainer = document.getElementById('activity-container');
+    const getActivityButton = document.getElementById('get-activity-btn');
 
-    function getQuote() {
-        fetch("https://api.quotable.io/random")
-            .then(response => response.json())
-            .then(data => {
-                quoteElement.textContent = `"${data.content}" - ${data.author}`;
-            })
-            .catch(error => {
-                console.error("Error fetching quote:", error);
-            });
+    async function fetchActivity() {
+        try {
+            const response = await fetch('https://www.boredapi.com/api/activity');
+            const data = await response.json();
+            return data.activity;
+        } catch (error) {
+            console.error('Error fetching activity:', error);
+            return null;
+        }
     }
 
-    // Get a new quote when the button is clicked
-    newQuoteButton.addEventListener("click", getQuote);
+    async function displayActivity() {
+        const activity = await fetchActivity();
+        if (activity) {
+            activityContainer.textContent = activity;
+        } else {
+            activityContainer.textContent = 'Failed to fetch activity. Please try again.';
+        }
+    }
 
-    // Get an initial quote when the page loads
-    getQuote();
+    getActivityButton.addEventListener('click', displayActivity);
 });
+
 
 
 

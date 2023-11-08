@@ -5,12 +5,12 @@
     text-align: center;
     margin: 0;
     padding: 20px 0;
-    color: rgb(58, 233, 58);
+    color: #558764;
     text-shadow: 3px 3px 1px black;
   }
   
   p {
-    color: rgb(245, 214, 230);
+    color: #334226;
     font-size: 20px;
     margin: 0;
     font-style: normal;
@@ -27,12 +27,16 @@
     display: block;
     margin: 0 auto;
   }
+
+  body {
+    background: #D3AC8B;
+  }
   
  
 /*HEADER STYLE*/
   
   .header-container {
-    background: #9b0606;
+    background: #E6C5AD;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,7 +44,7 @@
   }
   
   .header-content {
-    color: #f1f1f1;
+    color: #334226;
     width: 100%;
     max-width: 1000px;
     display: flex;
@@ -54,7 +58,8 @@
 /*INTRO STYLE*/
 
   .intro-container {
-    background-image: url(darkpurplerainbkgd.jpg);
+    background-image: url(notepadbkgd.jpg);
+    background-size: cover;
     background-repeat: repeat;
     display: flex;
     justify-content: center;
@@ -79,7 +84,7 @@
   
   .footer-content {
     font-size: 13px;
-    color: #f1f1f1;
+    color: #334226;
     width: 100%;
     max-width: 1000px;
     text-align: center;
@@ -173,7 +178,7 @@
     }
   
     ul#navigation li a {
-      color: #f1f1f1;
+      color: #588764;
       font-family: "Cabin", sans-serif;
       padding: 6px 12px;
       border: solid 2px transparent;
@@ -181,7 +186,7 @@
     }
   
     ul#navigation li a:hover {
-      color: #f1f1f1;
+      color: #334226;
       font-family: "Cabin", sans-serif;
       padding: 6px 12px;
       border-bottom: solid 2px #74b44a;
@@ -194,7 +199,7 @@
 /*QUIZ STYLE*/
 
 .quiz-container {
-    background-color: rgb(0, 73, 75);
+    background-color: #588764;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -217,7 +222,7 @@
 /*COUNTDOWN STYLE*/
 
 .countdown-container {
-  background-color: rgb(69, 0, 75);
+  background-color: #334226;
   text-align: center;
   padding: 20px;
   margin: 0 auto;
@@ -238,8 +243,6 @@ hr.double {
   font-size: 24px;
   color: #fff;
 }
-
-
 
 
 /*BORED STYLE*/

@@ -32,39 +32,58 @@
 
 <body>
 
-    <section class="contactform-container" id="contactform">
+  <section class="contactform-container" id="contactform">
     <div class="contactform-content">
-        <h2>Contact Us!</h2>
+      <h2 style="font-size: 30px;">Contact Us!</h2>
         <form action="https://getform.io/f/62337e16-e08c-42a4-bc15-0fa00951632e" method="POST">
-            <p>Let's start with the basics...</p>
-            <input type="text" name="name">First & Last Name</input>
-            <input type="email" name="email">Valid Email Address</input>
-            <input type="text" name="message">Briefly, explain why you want to work with L13.</input>
+          <p style="color: #334226;">Let's start with the basics...</p>
+
+            <label for="name">First & Last Name</label>
+            <input type="text" id="name" name="name">
+            
+            <label for="email">Valid Email Address</label>
+            <input type="email" id="email" name="email">
+
+            <label for="message">Briefly, explain why you want to work with L13.</label>
+            <input type="text" id="message" name="message">
+
             <!-- add hidden Honeypot input to prevent spams -->
-            <input type="hidden" name="_gotcha" style="display:none !important">
-            <!-- radio button handle -->
-            <p>What is your gender?</p>
-            <input type="radio" name="gender" value="male" checked>Male</input>
-            <input type="radio" name="gender" value="female">Female</input>
-            <input type="radio" name="gender" value="other">Other</input>
-            <!-- select field handle -->
-            <p>Please select the primary genre that you write.</p>
-            <select name="genre-experience">
-            <option value="Con-Romance">Contemporary Romance</option>
-            <option value="Par-Romance">Paranormal Romance</option>
-            <option value="Mys-Sus">Mystery/Suspense/Thriller</option>
-            <option value="SciFi">Science Fiction</option>
-            <option value="Fantasy">Urban/Epic/High Fantasy</option>
+            <input type="hidden" name="_gotcha" style="display:none !important"
+            >
+            <!-- Radio button handle -->
+            <fieldset>
+                <legend>What is your gender?</legend>
+              <label>
+                <input type="radio" name="gender" value="male" checked> Male
+              </label>
+              <label>
+                <input type="radio" name="gender" value="female"> Female
+              </label>
+              <label>
+                <input type="radio" name="gender" value="other"> Other
+              </label>
+            </fieldset>
+
+            <!-- Select field for genre experience -->
+            <label for="genre-experience">Please select the primary genre that you write.</label>
+            <select id="genre-experience" name="genre-experience">
+              <option value="Con-Romance">Contemporary Romance</option>
+              <option value="Par-Romance">Paranormal Romance</option>
+              <option value="Mys-Sus">Mystery/Suspense/Thriller</option>
+              <option value="SciFi">Science Fiction</option>
+              <option value="Fantasy">Urban/Epic/High Fantasy</option>
             </select>
-            <!-- select field handle -->
-            <p>Have you already published any books?</p>
-            <select name="publishing-experience">
-            <option value="0books">I have not yet published a book.</option>
-            <option value="1book">I've published 1 book.</option>
-            <option value="2-5books">I've published 2-5 books.</option>
-            <option value="5-9books">I've published 5-9 books.</option>
-            <option value="10books">I've published 10 or more books.</option>
-            </select>            
+
+            <!-- Select field for publishing experience -->
+            <label for="publishing-experience">Have you already published any books?</label>
+            <select id="publishing-experience" name="publishing-experience">
+              <option value="0books">I have not yet published a book.</option>
+              <option value="1book">I've published 1 book.</option>
+              <option value="2-5books">I've published 2-5 books.</option>
+              <option value="5-9books">I've published 5-9 books.</option>
+              <option value="10books">I've published 10 or more books.</option>
+            </select>
+            
             <button type="submit">SEND!</button>
         </form>
     </div>

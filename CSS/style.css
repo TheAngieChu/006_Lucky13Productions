@@ -21,6 +21,8 @@
     font-size: 25px;
     font-style: normal;
     line-height: 0%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   img {
@@ -206,7 +208,12 @@
     align-items: center;
     padding: 20px;
     margin: 0 auto;
-    width: 400px;
+    width: 1000px;
+}
+
+.quiz-content h2 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .options-container {

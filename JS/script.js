@@ -7,14 +7,24 @@ const quizData = [
         correctAnswer: "Writing"
     },
     {
-        question: "Which planet is known as the Red Planet?",
-        options: ["Earth", "Mars", "Jupiter", "Saturn"],
-        correctAnswer: "Mars"
+        question: "Which of these is not a term for a writing style?",
+        options: ["Planner", "Pantser", "Plantser", "Prancer"],
+        correctAnswer: "Prancer"
     },
     {
-        question: "What is the largest mammal in the world?",
-        options: ["Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
-        correctAnswer: "Blue Whale"
+        question: "Which is the most popular distribution platform?",
+        options: ["Amazon", "Barnes & Noble", "Apple", "Kobo"],
+        correctAnswer: "Amazon"
+    },
+    {
+        question: "What is the most popular genre for readers?",
+        options: ["Mystery", "Nonfiction", "Romance", "SciFi"],
+        correctAnswer: "Romance"
+    },
+    {
+        question: "Which of these is not a formatting program for books?",
+        options: ["Microsoft Word", "PowerShell", "Vellum", "Atticus"],
+        correctAnswer: "PowerShell"
     }
 ];
 
@@ -24,6 +34,7 @@ const nextButton = document.getElementById("next-btn");
 
 let currentQuestionIndex = 0;
 let score = 0;
+let selectedOption = null; // To keep track of the currently selected option
 
 function startQuiz() {
     showQuestion(quizData[currentQuestionIndex]);
@@ -42,34 +53,29 @@ function showQuestion(question) {
 }
 
 function selectAnswer(e) {
-    const selectedButton = e.target;
-    const correct = selectedButton.innerText === quizData[currentQuestionIndex].correctAnswer;
-
-    if (correct) {
-        score++;
+    if (selectedOption) {
+        selectedOption.classList.remove('selected');
     }
 
-    selectedButton.classList.add(correct ? "correct" : "incorrect", "selected");
+    selectedOption = e.target;
+    selectedOption.classList.add('selected');
 
-    // Disable all buttons to prevent further selections
-    Array.from(optionsContainer.children).forEach(button => {
-        button.disabled = true;
-    });
-
-    // Enable the next button
     nextButton.disabled = false;
 }
-
-
 
 function resetState() {
     nextButton.disabled = true;
     while (optionsContainer.firstChild) {
         optionsContainer.removeChild(optionsContainer.firstChild);
     }
+    selectedOption = null; // Reset the selected option
 }
 
 function showNextQuestion() {
+    if (selectedOption && selectedOption.innerText === quizData[currentQuestionIndex].correctAnswer) {
+        score++;
+    }
+
     resetState();
     currentQuestionIndex++;
     if (currentQuestionIndex < quizData.length) {
@@ -87,6 +93,7 @@ function endQuiz() {
 nextButton.addEventListener("click", showNextQuestion);
 
 startQuiz();
+
 
 
 /*COUNTDOWN SCRIPT*/

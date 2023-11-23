@@ -123,7 +123,8 @@
   
   
 /*MEDIA STYLE*/
-  
+
+
 @media only screen and (min-width: 320px) {
 }
 
@@ -233,7 +234,11 @@
   text-align: center;
   padding: 20px;
   margin: 0 auto;
+}
 
+.countdown-content h2 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .countdown-content {
@@ -252,7 +257,7 @@ hr.double {
 }
 
 
-/*BORED STYLE*/
+/*BORED STYLE - outside of media query, affects all screen sizes*/
 
 .container {
   text-align: center;
@@ -262,9 +267,14 @@ hr.double {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.container h2 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
 .activity-container {
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 18px; /* This will affect <p> and other text, not <h2> */
   color: #daff76;
 }
 
@@ -301,4 +311,50 @@ input,
 textarea {
     display: block;
     margin-bottom: 10px;
+}
+
+
+
+/*-------------------RESPONSIVE MOBILE VIEW-------------------*/
+
+@media only screen and (max-width: 768px) {
+  /* Adjust the overall layout containers */
+  .quiz-container, .contactform-container, .container {
+      width: 100%; /* Use 100% width instead of fixed pixels */
+      margin: 10px 0; /* Adjust margin as needed */
+      padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  /* Adjust form width inside contact form */
+  form {
+      max-width: 100%; /* Allow form to take full width of its container */
+  }
+
+  /* Make quiz, countdown, and bored sections responsive */
+  .quiz-content, .quiz-content h2, .countdown-container, .countdown-content h2, .container h2, .activity-container {
+      font-size: 18px; /* Adjust font size for smaller screens */
+  }
+
+  /* Adjust header and footer containers */
+  .header-container, .footer-container {
+      flex-direction: column; /* Stack elements vertically */
+  }
+
+  /* Adjust header navigation */
+  .header-content {
+      flex-direction: column; /* Stack elements vertically */
+  }
+
+  /* Update navigation list for smaller screens */
+  ul#navigation {
+      flex-direction: column; /* Stack nav items vertically */
+      padding: 0;
+  }
+
+  ul#navigation li a {
+      padding: 8px; /* Increase padding for touch targets */
+      font-size: 16px; /* Adjust font size */
+  }
+
+  /* Other necessary style adjustments for smaller screens... */
 }

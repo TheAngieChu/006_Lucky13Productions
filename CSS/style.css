@@ -14,15 +14,22 @@
     font-size: 20px;
     margin: 0;
     font-style: normal;
+    line-height: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    word-break: break-word;
   }
 
   h2 {
     color: rgb(245, 214, 230);
     font-size: 25px;
     font-style: normal;
-    line-height: 0%;
+    line-height: normal;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    white-space: normal;
+    word-break: break-word;
   }
 
   img {
@@ -239,6 +246,10 @@
 .countdown-content h2 {
   word-wrap: break-word;
   overflow-wrap: break-word;
+  white-space: normal;
+  word-break: break-word;
+  line-height: normal;
+  max-width: 100%; /* Make sure the container takes the full width */
 }
 
 .countdown-content {

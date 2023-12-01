@@ -318,6 +318,44 @@ hr.double {
 
 
 
+/*CHART STYLE*/
+.graph-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 300px; /* Adjust as needed */
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #000000;
+  background: #334226;
+}
+
+.bar {
+  width: 100px; /* Adjust as needed */
+  text-align: center;
+  color: black;
+  margin: 0 5px;
+  font-size: 14px; /* Adjust as needed */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 768px) {
+  .graph-content {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+  }
+  .bar {
+      width: 90%;
+      margin: 10px 0;
+  }
+}
+
+
+
 /*CONTACT STYLE*/
 
 .contactform-container {

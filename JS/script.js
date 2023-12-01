@@ -147,7 +147,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
 /*CONTACT SCRIPT*/
 
 const contactForm = document.getElementById("contact-form");
